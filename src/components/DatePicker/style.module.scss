@@ -1,0 +1,88 @@
+@import '../../scss/main.scss';
+
+.outter {
+  position: fixed;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 2rem);
+  max-width: 428px;
+  max-height: 100vh;
+  padding: 1rem 1rem 1rem;
+  border-radius: 3px;
+  overflow-y: scroll;
+  text-align: center;
+  border-radius: 0 3px 3px 0;
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 0.5rem 0;
+  }
+
+  .month {
+    @include body-text;
+    padding: 0.5rem;
+  }
+
+  .angleLeft {
+    margin-right: 2rem;
+  }
+
+  .angleRight {
+    margin-left: 2rem;
+  }
+
+  .gridItemWeekday, .gridItemDay, .gridItemPrevDay {
+    padding: 0.2rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .gridItemWeekday {
+    @include body-text-bold;
+  }
+  
+  .gridItemDay, .gridItemPrevDay {
+    @include body-text;
+  }
+
+  .selected {
+    @include body-text-bold;
+  }
+}
+
+.dark {
+  background-color: $dark-gray-light;
+
+  .month, .gridItemWeekday {
+    color: $dark-white;
+  }
+
+  .gridItemDay {
+    color: $dark-white;
+
+    &:hover {
+      color: rgba($dark-gray-text, 0.7);
+    }
+  }
+
+  .gridItemPrevDay {
+    color: rgba($dark-gray-text, 0.7);
+  }
+
+  .selected {
+    color: $dark-blue !important;
+  }
+}
+
+.light {
+  background-color: $light-smoke;
+
+  .month, .gridItemWeekday {
+    color: $light-black;
+  }
+}

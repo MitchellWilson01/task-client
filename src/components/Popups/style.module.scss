@@ -1,0 +1,263 @@
+@import '../../scss/main.scss';
+
+.outter {
+  @include basic-text;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 2rem);
+  max-width: 428px;
+  max-height: 100vh;
+  padding: 2rem 1rem 1rem;
+  border-radius: 3px;
+  overflow-y: scroll;
+  z-index: 3;
+
+  .header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 0.5rem;
+    font-size: 4rem;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+
+  .title {
+    @include title-text;
+  }
+
+  .input, .datePicker {
+    @include body-text;
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    margin-top: 0.6rem;
+    padding-left: 0.5rem;
+    border-radius: 3px;
+    border: none;
+  }
+
+  .datePicker {
+    display: flex;
+    justify-content: space-between;
+    //@at-root: solid red 1px;
+  }
+
+  .miniInput {
+    @include body-text;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 3px;
+    border: none;
+    min-width: 0;
+    width: calc(100% - 1.2rem);
+    overflow: auto;
+  }
+
+  .date {
+    display: flex;
+  }
+
+  .icon {
+    display: inline-block;
+  }
+
+  .calendarIcon {
+    margin-right: 3rem;
+    display: inline-block;
+  }
+
+  .date, .icon {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .icon {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  .button {
+    @include small-text-bold;
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    margin-top: 0.6rem;
+    border-radius: 3px;
+    border: none;
+    color: $dark-white;
+  }
+
+  .cancel {
+    width: initial;
+    float: right;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .forgot {
+    @include small-text;
+    float: right;
+    margin: 0.4rem 0;
+    text-decoration: none;
+  }
+
+  .small {
+    @include small-text;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  .small2 {
+    @include small-text;
+    text-align: center;
+  }
+
+  .link {
+    color: $success !important;
+    text-decoration: none;
+  }
+
+  .message {
+    @include body-text;
+    text-align: center;
+  }
+}
+
+.change {
+  padding-top: 0rem;
+}
+
+.dark {
+  background-color: $dark-gray-med;
+
+  .logo {
+    color: $dark-gray-light;
+    background-image: linear-gradient(45deg, $dark-orange, $dark-pink);
+  }
+
+  .title {
+    color: $dark-white;
+  }
+
+  .input {
+    background-color: $dark-gray-light;
+    color: $dark-white;
+  }
+
+  .datePicker, .miniInput {
+    background-color: $dark-gray-light;
+    color: $dark-white;
+  }
+
+  .noDate {
+    color: rgba($dark-white, 0.55)
+  }
+
+  .icon {
+    color: $dark-white;
+  }
+
+  .button {
+    background-color: $dark-blue;
+
+    &:hover, &:active {
+      background-color: $dark-blue-alt;
+    }
+  }
+
+  .cancel {
+    background-color: transparent;
+    color: $dark-white;
+
+    &:hover, &:active {
+      background-color: initial;
+      color: $dark-gray-text;
+    }
+  }
+
+  .forgot {
+    color: $dark-gray-text;
+  }
+
+  .link {
+    color: $dark-gray-text;
+  }
+
+  .small {
+    color: $dark-gray-text;
+  }
+
+  .message {
+    color: $dark-gray-text;
+  }
+}
+
+.light {
+  background-color: $light-white;
+  box-shadow: 0 1px 1px rgba($light-black, 0.1), 
+              0 2px 2px rgba($light-black, 0.1), 
+              0 4px 4px rgba($light-black, 0.1);
+
+  .logo {
+    color: $dark-gray-light;
+    background-image: linear-gradient(45deg, $light-orange, $light-pink);
+  }
+
+  .title {
+    color: $light-black;
+  }
+
+  .input {
+    background-color: $light-white;
+    color: $light-black;
+    border: solid $light-gray-light 1px;
+  }
+
+  .button {
+    background-color: $light-blue;
+
+    &:hover, &:active {
+      background-color: $light-blue-alt;
+    }
+  }
+
+  .cancel {
+    background-color: transparent;
+    color: $light-black;
+
+    &:hover, &:active {
+      background-color: initial;
+      color: $light-gray;
+    }
+  }
+
+  .forgot {
+    color: $light-gray;
+  }
+
+  .link {
+    color: $light-gray;
+  }
+
+  .small {
+    color: $light-gray;
+  }
+
+  .message {
+    color: $light-gray;
+  }
+}

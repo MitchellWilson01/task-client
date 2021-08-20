@@ -1,0 +1,45 @@
+@import '../../scss/main.scss';
+
+.outter {
+  width: calc(100% - 2rem);
+  max-width: 50rem;
+  position: absolute;
+  margin-top: 2rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: 350ms;
+
+  .header {
+    @include title-text;
+    margin-bottom: 3rem;
+  }
+
+  .taskDeleter {
+    float: right;
+  }
+
+  .times {
+    color: $dark-blue;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.open {
+  left: calc(50% + 10rem);
+  transition: 350ms;
+}
+
+.light {
+  .header {
+    color: $light-black;
+  }
+}
+
+.dark {
+  .header {
+    color: $dark-white;
+  }
+}

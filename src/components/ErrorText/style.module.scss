@@ -1,0 +1,7 @@
+@import "../../scss/main.scss";
+
+.text {
+  @include small-text;
+  color: $danger;
+  text-align: center;
+}

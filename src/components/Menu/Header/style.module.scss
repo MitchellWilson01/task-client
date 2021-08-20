@@ -1,0 +1,40 @@
+@import '../../../scss/main.scss';
+
+.outter {
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  //position: relative;
+  //z-index: 1;
+
+  .left {
+    display: flex;
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .icon {
+    padding: 0.5rem 0.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+.dark {
+  background-color: $dark-blue;
+
+  .icon {
+    color: $dark-white;
+  }
+}
+
+.light {
+  background-color: $light-blue;
+
+  .icon {
+    color: $light-white;
+  }
+}

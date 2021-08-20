@@ -1,0 +1,17 @@
+@import '../../scss/main.scss';
+
+.outter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dark {
+  background-color: white;
+  color: black;
+}
+
+.light {
+  background-color: black;
+  color: white;
+}

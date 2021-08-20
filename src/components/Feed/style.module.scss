@@ -1,0 +1,59 @@
+@import './../../scss/main.scss';
+
+.outter {
+  width: calc(100% - 2rem);
+  max-width: 50rem;
+  position: absolute;
+  margin-top: 2rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: 350ms;
+
+  .header {
+    @include title-text;
+    margin-bottom: 3rem;
+  }
+
+  .date {
+    @include body-text;
+  }
+
+  .dateToggler {
+    float: right;
+  }
+
+  .leftArrow, .rightArrow {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .leftArrow {
+    margin-right: 0.75rem;
+  }
+}
+
+.open {
+  left: calc(50% + 10rem);
+  transition: 350ms;
+}
+
+.light {
+  .header {
+    color: $light-black;
+  }
+
+  .date {
+    color: $light-gray;
+  }
+}
+
+.dark {
+  .header {
+    color: $dark-white;
+  }
+
+  .date {
+    color: $dark-gray-text;
+  }
+}

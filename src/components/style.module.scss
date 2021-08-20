@@ -1,0 +1,14 @@
+@import '../scss/main.scss';
+
+.wrapper {
+  min-height: 100vh;
+  position: relative;
+}
+
+.dark {
+  background-color: $dark-black;
+}
+
+.light {
+  background-color: $light-smoke;
+}

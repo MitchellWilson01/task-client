@@ -1,0 +1,93 @@
+@import '../../scss/main.scss';
+
+.outter {
+  display: flex;
+  padding: 0.5rem 0;
+
+  .container {
+    width: 100%;
+    padding-left: 1rem;
+  }
+
+  .section {
+    display: flex;
+    width: 100%;
+  }
+
+  .section_1 {
+    justify-content: space-between;
+  }
+  
+  .section_2 {
+    //flex-wrap: wrap;
+    justify-content: space-between; //flex-start
+    margin-top: 0.5rem;
+  }
+
+  .wrapper_2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .wrapper {
+    @include body-text;
+    display: flex;
+    line-height: 1.2rem;
+  }
+
+  .circle, .button, .bigButton {
+    cursor: pointer;
+  }
+
+  .circle {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    margin-left: 0.75rem;
+    font-size: 1.2rem;
+  }
+
+  .bigButton {
+    @include small-text-bold;
+    border: none;
+    border-radius: 3px;
+    padding: 0 0.5rem;
+    line-height: 100%;
+    min-width: 5rem;
+    height: 1.25rem;
+  }
+
+  .tag {
+    @include small-text;
+    margin-right: 1rem;
+  }
+}
+
+.dark {
+  border-top: solid rgba($dark-gray-text, 0.3) 1px;
+  color: $dark-white;
+
+  .tag {
+    color: $dark-blue;
+  }
+
+  .cancelButton {
+    color: $dark-gray-dark;
+    background-color: $dark-white;
+  }
+
+  .deleteButton {
+    color: $dark-white;
+    background-color: $danger;
+  }
+}
+
+.light {
+  border-top: solid rgba($light-gray, 0.3) 1px;
+  color: $light-black;
+
+  .tag {
+    color: $light-blue;
+  }
+}

@@ -1,0 +1,117 @@
+@import '../../../scss/main.scss';
+
+.outter {
+  position: fixed;
+  top: 3.5rem;
+  left: -100%;
+  transition: 850ms;
+  height: calc(100% - 3.5rem);
+  width: 90%;
+  max-width: 20rem;
+
+  .container {
+    padding: 2rem 1rem 0rem 1.5rem;
+  }
+
+  .title {
+    @include body-text-bold;
+    display: inline-block;
+    padding-left: 0.5rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .wrapper {
+    float: right;
+    padding-right: 0.5rem;
+  }
+
+  .icon {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+    transition: transform 0.1s linear;
+  }
+
+  .up {
+    transform: rotate(-90deg);
+    transition: transform 0.1s linear; 
+  }
+
+  .groups {
+    @include body-text;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s linear;
+  }
+
+  .group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 3px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .open {
+    max-height: 25rem;
+    transition: max-height 0.3s linear;
+  }
+
+  .remove {
+    @include small-text-bold;
+    color: $danger;
+  }
+}
+
+.open {
+  left: 0;
+  transition: 350ms;
+}
+
+.dark {
+  background-color: $dark-gray-med;
+
+  .title, .icon {
+    color: $dark-white;
+  }
+
+  .groups {
+    color: $dark-gray-text;
+  }
+
+  .group {
+    &:hover {
+      background-color: $dark-gray-light;
+    }
+  }
+
+  .bullet {
+    color: $dark-blue;
+  }
+}
+
+.light {
+  background-color: $light-white;
+
+  .title, .icon {
+    color: $light-black;
+  }
+
+  .groups {
+    color: $light-gray;
+  }
+
+  .group {
+    &:hover {
+      background-color: $light-gray-light;
+    }
+  }
+
+  .bullet {
+    color: $light-blue;
+  }
+}
